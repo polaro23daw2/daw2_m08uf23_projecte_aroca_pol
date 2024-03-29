@@ -7,7 +7,7 @@
 <body>
     <h2>Modificar un usuario existente</h2>
     <form action="../modify_user.php" method="post">
-        uid: <input type="radio" name="uid" required><br>
+        uid: <input type="text" name="uid" required><br>
         unitat organitzativa: <input type="text" name="unitat_organitzativa" required><br>
         
         Atributo a modificar:<br>
@@ -47,7 +47,7 @@
         <input type="radio" id="description" name="atributoAmodificar" value="description">
         <label for="description">description</label><br>
         
-        <!-- Nuevo Valor: <input type="text" name="atributoAmodificar" required><br> -->
+        Nuevo Valor: <input type="text" name="atributoAmodificar" required><br>
         <input type="submit" value="Modificar Usuario">
     </form>
 </body>

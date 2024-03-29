@@ -11,6 +11,7 @@
         <li><a href="templates/add_user_form.php">Añadir Usuario</a></li>
         <li><a href="templates/delete_user_form.php">Eliminar Usuario</a></li>
         <li><a href="templates/modify_user_form.php">Modificar Usuario</a></li>
+		<li><a href="templates/visualizar_Usuario.php">visualizar un Usuario</a></li>
     </ul>
 </body>
 </html>
