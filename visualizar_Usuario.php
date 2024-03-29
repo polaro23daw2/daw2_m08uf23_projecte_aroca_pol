@@ -18,13 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $resultado = $ldap->search($filtro, $dn, Ldap::SEARCH_SCOPE_SUB);
         
         if ($resultado->count() > 0) {
-            // Utiliza current() para obtener la primera entrada de los resultados.
             $entrada = $resultado->current();
             if ($entrada) {
-                // Obtener atributos de la entrada.
                 $datos = $ldap->getEntry($entrada['dn']);
                 
-                echo "<h3>Datos del Usuario:</h3>";
+                echo "<h3>Datos del Usuario: $uid</h3>";
                 if (!empty($datos)) {
                     echo "<table border='1'>";
                     echo "<tr><th>Atributo</th><th>Valor</th></tr>";
@@ -36,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         }
                     }
                     echo "</table>";
+                    echo "<a href='http://localhost/proyecto/'>ir al menu principal</a>";
                 } else {
                     echo "<p>No se encontraron datos para el usuario.</p>";
                 }

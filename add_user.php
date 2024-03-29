@@ -22,12 +22,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'mobile' => $_POST['mobile'],
         'telephoneNumber' => $_POST['telephoneNumber'],
         'title' => $_POST['title'],
-        'description' => $_POST['description']
+        'description' => $_POST['description'],
     ];
     
     try {
         $ldap->add($dn, $datos);
         echo "<p>Usuario añadido con éxito.</p>";
+        echo "<a href='http://localhost/proyecto/'>ir al menu principal</a>";
     } catch (\Laminas\Ldap\Exception\LdapException $e) {
         echo "<p>Error al añadir el usuario: " . $e->getMessage() . "</p>";
     }
