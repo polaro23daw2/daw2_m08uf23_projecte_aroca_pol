@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><package xmlns="http://www.zend.com/server/deployment-descriptor/1.0" version="1.0">
+    <name>proyectom08uf23</name>
+    <summary>aplicacion para añadir/eliminar/modificar usuarios</summary>
+    <version>
+        <release>1.0.0</release>
+    </version>
+    <appdir>data</appdir>
+</package>
