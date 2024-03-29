@@ -8,7 +8,12 @@
     <h2>Añadir un nuevo usuario</h2>
     <form action="../add_user.php" method="post">
         uid: <input type="text" name="uid" required><br>
-        unitat organitzativa: <input type="text" name="unitat_organitzativa" required><br>
+                unitat organitzativa:<select name="unitat_organitzativa" required>
+        <option value="---">seleciona la unidad organitzativa que desea</option>
+        <option value="administradors">administradors</option>
+        <option value="desenvolupadors">desenvolupadors</option>
+        <option value="usuaris">usuaris</option>
+        </select><br>
         uidNumber: <input type="text" name="uidNumber" required><br>
         gidNumber: <input type="text" name="gidNumber" required><br>
 		Directori personal: <input type="text" name="Directori_personal" required><br>
