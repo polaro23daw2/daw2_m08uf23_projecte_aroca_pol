@@ -1,3 +1,10 @@
+<?php
+if (!isset($_COOKIE['loggued']) || $_COOKIE['loggued'] !== 'true') {
+    echo "No pots accedir aquí sense fer login. Ho pots fer aquí: ";
+    echo "<a href='http://zend-poaris.fjeclot.net/projecte/'>login</a>";
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

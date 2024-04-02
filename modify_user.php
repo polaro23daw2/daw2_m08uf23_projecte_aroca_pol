@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $ldap->update($datos, $arrayModificacion);
         echo "Atributo modificado con éxito.";
-        echo "<a href='http://localhost/proyecto/'>ir al menu principal</a>";
+        echo "<a href='http://zend-poaris.fjeclot.net/projecte/'>ir al menu principal</a>";
     } catch (\Laminas\Ldap\Exception\LdapException $e) {
         echo "Error al modificar el atributo: " . $e->getMessage();
     }

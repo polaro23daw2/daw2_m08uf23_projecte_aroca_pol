@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ldap = ldapConnect();
     
     $uid = $_POST['uid'];
-    $ou = $_POST['ou'];
+    $ou = $_POST['unitat_organitzativa'];
     $dn = "ou=$ou,dc=fjeclot,dc=net";
 
     $filtro = "(uid=$uid)";
@@ -27,14 +27,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<table border='1'>";
                     echo "<tr><th>Atributo</th><th>Valor</th></tr>";
                     foreach ($datos as $atributo => $valores) {
-                        if ($atributo !== 'dn' && is_array($valores)) { // Ignorar el DN y asegurarse de que es un array
+                        if ($atributo !== 'dn' && is_array($valores)) {
                             foreach ($valores as $valor) {
                                 echo "<tr><td>".htmlspecialchars($atributo)."</td><td>".htmlspecialchars($valor)."</td></tr>";
                             }
                         }
                     }
                     echo "</table>";
-                    echo "<a href='http://localhost/proyecto/'>ir al menu principal</a>";
+                    echo "<a href='http://zend-poaris.fjeclot.net/projecte/'>ir al menu principal</a>";
                 } else {
                     echo "<p>No se encontraron datos para el usuario.</p>";
                 }
