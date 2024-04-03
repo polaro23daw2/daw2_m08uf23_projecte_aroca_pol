@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $ldap->add($dn, $datos);
         echo "<p>Usuario añadido con éxito.</p>";
-        echo "<a href='http://zend-poaris.fjeclot.net/projecte//'>ir al menu principal</a>";
+        echo "<a href='https://zends-poaris/proyectom08uf23/menu.php'>ir al menu principal</a>";
     } catch (\Laminas\Ldap\Exception\LdapException $e) {
         echo "<p>Error al añadir el usuario: " . $e->getMessage() . "</p>";
     }
