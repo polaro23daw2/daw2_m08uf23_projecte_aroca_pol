@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         }
                     }
                     echo "</table>";
-                    echo "<a href='http://zend-poaris.fjeclot.net/projecte/'>ir al menu principal</a>";
+                    echo "<a https://zends-poaris/proyectom08uf23/menu.php'>ir al menu principal</a>";
                 } else {
                     echo "<p>No se encontraron datos para el usuario.</p>";
                 }
